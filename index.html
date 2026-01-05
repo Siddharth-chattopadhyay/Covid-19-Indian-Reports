@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Covid Reports</title>
+    <link rel="stylesheet" href="assets/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+
+<body class="p-0 m-0">
+    <header>
+        <section>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">India Covid Reports</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse my-md-0 my-1" id="navbarSupportedContent">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#summary" aria-controls="offcanvasExample">
+                            Show Summary
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <h1 class="text-center text-decoration-underline pt-5">Covid 19 Cases by Regions</h1>
+        <section class=p-5 class="border border-1 border-secondary">
+            <div class="card row flex-row justify-content-evenly bg-danger-subtle" id="cardbuttons">
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <div class="offcanvas offcanvas-start" style="width: 500px;" tabindex="-1" id="summary" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Summary</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="border border-1 border-secondary p-2 rounded">
+                <p>
+                    There are total <span id="total" class="lh-1 text-success">Unknown</span> cases.<br>
+                    <span id="confirmcasesin" class="lh-1 text-success">Unknown</span> of them are confirmed by indians and 
+                    <span id="confirmcasesfr" class="lh-1 text-success">Unknown</span> of them are confirmed by foreigners. <br>
+                    <span id="discharged" class="lh-1 text-success">Unknown</span> patients has been discharged and <span id="deaths" class="lh-1 text-success">Unknown</span> has died due to covid.<br>
+                    <span id="uindenloconfirmedcases" class="lh-1 text-success">Unknown</span> has confirmed but location was not identified.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" style="width: 500px;" tabindex="-1" id="showreport" aria-labelledby="offcanvasExampleLabelreport">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabelreport">Summary from <span id="loc" class="text-success"></span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="border border-1 border-secondary p-2 rounded" id="showrep">
+                
+            </div>
+        </div>
+    </div>
+    <script src="assets/JS/bootstrap.bundle.min.js"></script>
+    <script src="assets/JS/script.js"></script>
+    <script>
+        main();
+    </script>
+</body>
+
+</html>
